@@ -21,7 +21,7 @@
 #define SLEEP_TIME 200000L
 
 static char *get_switches_state(void) {    
-    const char *attrname = "/sys/class/usb/osrfx2_0/device/switches";   
+    const char *attrname = "/sys/class/usbmisc/osrfx2_0/device/switches";   
     char        attrvalue[BUF_LEN] = {0};
     int         fd, count;
 
@@ -40,7 +40,7 @@ static char *get_switches_state(void) {
 }
 
 static char *get_7segment_state(void) {    
-    const char *attrname = "/sys/class/usb/osrfx2_0/device/7segment";   
+    const char *attrname = "/sys/class/usbmisc/osrfx2_0/device/7segment";   
     char        attrvalue[BUF_LEN] = {0};
     int         fd, count;
 
@@ -60,7 +60,7 @@ static char *get_7segment_state(void) {
 }
 
 static char *get_bargraph_state(void) {    
-    const char *attrname = "/sys/class/usb/osrfx2_0/device/bargraph";   
+    const char *attrname = "/sys/class/usbmisc/osrfx2_0/device/bargraph";   
     char        attrvalue[BUF_LEN] = {0};
     int         fd, count;
 
@@ -80,7 +80,7 @@ static char *get_bargraph_state(void) {
 }
 
 static int set_7segment_state(unsigned char value) {
-    const char *attrname = "/sys/class/usb/osrfx2_0/device/7segment";
+    const char *attrname = "/sys/class/usbmisc/osrfx2_0/device/7segment";
     char attrvalue [32];
     int  fd, count, len;
     
@@ -100,7 +100,7 @@ static int set_7segment_state(unsigned char value) {
 }
 
 static int set_bargraph_state(unsigned char value) {
-    const char *attrname = "/sys/class/usb/osrfx2_0/device/bargraph";
+    const char *attrname = "/sys/class/usbmisc/osrfx2_0/device/bargraph";
     char attrvalue [32];
     int  fd, count, len;
     
